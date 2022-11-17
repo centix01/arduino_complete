@@ -1,0 +1,57 @@
+AT
+AT+CMEE=2
+at+cpin?
+
+AT+CFUN=0
+AT+CFUN=1
+
+AT+COPS?
+AT+CREG?
+AT+CSPN?
+AT+CSQ
+
+
+AT+CSTT="pinternet.interkom.de","",""    #set APN
+AT+CIICR   #gprse connection
+AT+CIFSR    # get ip
+
+AT+CIPSTART="TCP","exploreembedded.com",80
+AT+CIPSEND=63
+GET exploreembedded.com/wiki/images/1/15/Hello.txt HTTP/1.0
+
+AT+CNETSCAN=1
+AT+CNETSCAN
+
+
+{
+"Cellid": 64187,
+"locationAreaCode": 5127,
+"mobileCountryCode": 262,
+"mobileNetworkCode":01,
+"signalStrength": -75
+},
+{
+"mobileCountryCode": 262,"mobileNetworkCode" :01, "signalStrength":-58,"Cellid":64171,"locationAreaCode":5127
+},
+{
+"mobileCountryCode": 262,"mobileNetworkCode" :01, "signalStrength":-46,"Cellid":64186,"locationAreaCode":5127
+},
+{
+"mobileCountryCode": 262,"mobileNetworkCode" :02, "signalStrength":-61,"Cellid":54403,"locationAreaCode":308 
+},
+{
+"mobileCountryCode": 262,"mobileNetworkCode" :02, "signalStrength":-60,"Cellid":54401,"locationAreaCode":308 
+}
+{
+  "cellTowers": [
+    {
+      "cellId": 170402199,
+      ""locationAreaCode"": 35632,
+      "mobileCountryCode": 310,
+      "mobileNetworkCode": 410,
+      "age": 0,
+      "signalStrength": -60,
+      "timingAdvance": 15
+    }
+  ]
+}
